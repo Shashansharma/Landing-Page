@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice</title>
+  <style>
+    body {
+     background: linear-gradient(to right, #5dd93e, #ffffff);
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      color: #000;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .company-info {
+      line-height: 1.5;
+    }
+
+    .invoice-info {
+      border: 1px solid #aaa;
+      padding: 10px;
+      width: 200px;
+    }
+
+    .invoice-info div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    h1 {
+      color: #888;
+      text-align: right;
+    }
+
+    .bill-to {
+      margin: 40px 0;
+      padding: 10px;
+      border: 1px solid #aaa;
+      width: fit-content;
+    }
+
+    .description-section {
+      border-top: 2px solid #aaa;
+      border-bottom: 2px solid #aaa;
+    }
+
+    .description-header,
+    .description-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .description-header {
+      font-weight: bold;
+      border-bottom: 1px solid #aaa;
+    }
+
+    .description-row:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .note {
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>INVOICE</h1>
+
+  <div class="header">
+    <div class="company-info">
+      <strong>[Company Name]</strong><br>
+      [Street Address]<br>
+      [City, ST ZIP]<br>
+      Phone: (000) 000-0000
+    </div>
+
+    <div class="invoice-info">
+      <div><span><strong>INVOICE #</strong></span><span>[123456]</span></div>
+      <div><span><strong>DATE</strong></span><span>5/1/2014</span></div>
+    </div>
+  </div>
+
+  <div class="bill-to">
+    <strong>BILL TO</strong><br>
+    [Name]<br>
+    [Company Name]<br>
+    [Street Address]<br>
+    [City, ST ZIP]<br>
+    [Phone]<br>
+    [Email Address]
+  </div>
+
+  <div class="description-section">
+    <div class="description-header">
+      <div>DESCRIPTION</div>
+      <div>AMOUNT</div>
+    </div>
+    <div class="description-row">
+      <div>Service Fee</div>
+      <div>$200.00</div>
+    </div>
+    <div class="description-row">
+      <div>Labor: 5 hours at $75/hr</div>
+      <div>$375.00</div>
+    </div>
+    <div class="description-row">
+      <div>New client discount</div>
+      <div>($60.00)</div>
+    </div>
+    <div class="description-row">
+      <div>Tax (4.25% after discount)</div>
+      <div>$28.56</div>
+    </div>
+  </div>
+
+  <div class="note">
+    Thank you for your business!
+  </div>
+
+  <div class="total">
+    <div>TOTAL</div>
+    <div>$551.56</div>
+  </div>
+
+  <div class="footer">
+    If you have any questions about this invoice, please contact<br>
+    [Name, Phone, email@address.com]
+  </div>
+
+</body>
+</html>
